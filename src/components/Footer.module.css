@@ -10,6 +10,22 @@
 .main section {
   display: flex;
   flex: 1;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.main section div {
+  display: flex;
+  align-items: baseline;
   gap: 2rem;
+}
+
+.main section a {
+  color: white;
+}
+
+.img {
+  object-fit: contain;
+  width: 2.5rem;
+  height: auto;
 }
