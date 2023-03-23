@@ -1,20 +1,5 @@
 import styles from './Footer.module.css'
-import twitter from '../assets/twitter.png'
-import linkedin from '../assets/linkedin.png'
-
-function IconButton ({ type, href }) {
-  const IconTypes = {
-    twitter,
-    linkedin
-  }
-  const imgSrc = IconTypes[type] || ''
-
-  return (
-    <a href={href} target='_blank' rel='noreferrer'>
-      <img className={styles.img} src={imgSrc} alt={`${type} logo`} />
-    </a>
-  )
-}
+import IconButton from './IconButton'
 
 function Footer () {
   return (
