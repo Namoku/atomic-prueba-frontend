@@ -17,8 +17,12 @@
   width: 4rem;
 }
 
-.cards {
-  margin-top: 6rem;
+.cards header {
+  margin: 6rem;
+}
+
+.cards main {
+  display: flex;
 }
 
 .cards p {
