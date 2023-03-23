@@ -6,6 +6,7 @@ function FooterHome ({ className }) {
   return (
     <section className={className}>
       <main>
+        <div />
         <section>
           <article>
             <div>
