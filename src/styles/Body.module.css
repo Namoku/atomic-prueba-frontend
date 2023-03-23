@@ -58,6 +58,7 @@
 .footerHome main section {
   display: flex;
   align-items: center;
+  gap: 4rem;
 }
 
 .footerHome main section article {
@@ -71,8 +72,34 @@
   justify-content: center;
   align-items: center;
   height: 16rem;
+  flex: 1;
 }
 
 .footerHome main section article div img {
   height: 100%;
+}
+
+.footerHome main section article ul {
+  max-width: 22.5rem;
+  list-style: none;
+  padding-left: 0;
+}
+.footerHome main section article ul li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 1.5rem;
+  padding-left: 2.25rem;
+  font-weight: 600;
+  list-style: none;
+}
+.footerHome main section article ul li:before {
+  content: '';
+  width: 1.75rem;
+  height: 1.75rem;
+  position: absolute;
+  background-image: url('../assets/check.png');
+  background-size: cover;
+  background-position: center;
+  left: 0;
+  top: 10%;
 }
