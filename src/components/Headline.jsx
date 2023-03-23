@@ -12,10 +12,12 @@ function Headline () {
         />
       </article>
       <article>
+        <p>Desarrolla todo</p>
         <p>
-          Desarrolla todo
           <span>tu POTENCIAL</span>
-          dentro del equipo
+        </p>
+        <p>dentro del equipo</p>
+        <p>
           <span>ATOMIC</span>LABS
         </p>
         <Button title='¡Quiero ser parte!' />
