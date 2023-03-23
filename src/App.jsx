@@ -1,6 +1,7 @@
 import { Route } from 'wouter'
 import Footer from './components/Footer'
 import Home from './pages/Home'
+import './index.css'
 
 function App () {
   return (

@@ -16,6 +16,17 @@
   --accent: #00609c;
 }
 
+.App {
+  background-image: url('./assets/background.png');
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
 body {
   margin: 0;
 }
