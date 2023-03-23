@@ -1,4 +1,4 @@
-import styles from './Footer.module.css'
+import styles from 'styles/Footer.module.css'
 import IconButton from './IconButton'
 
 function Footer () {

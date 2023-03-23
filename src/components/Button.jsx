@@ -1,4 +1,4 @@
-import styles from './Button.module.css'
+import styles from 'styles/Button.module.css'
 
 function Button ({ title, onClick, type, disabled }) {
   const typeStyle = type === 'secondary' ? styles.secondary : styles.primary

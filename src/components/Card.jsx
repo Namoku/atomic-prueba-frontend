@@ -1,4 +1,4 @@
-import styles from './Card.module.css'
+import styles from 'styles/Card.module.css'
 
 function Card ({ img, alt, header, children, type }) {
   const typeStyle = type === 'main' ? styles.main : ''

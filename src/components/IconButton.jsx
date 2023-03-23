@@ -1,4 +1,4 @@
-import styles from './Footer.module.css'
+import styles from 'styles/Footer.module.css'
 import twitter from '../assets/twitter.png'
 import linkedin from '../assets/linkedin.png'
 import drop from '../assets/drop.png'

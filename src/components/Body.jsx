@@ -1,5 +1,5 @@
 import IconButton from '../components/IconButton'
-import styles from './Body.module.css'
+import styles from 'styles/Body.module.css'
 import Cards from './Cards'
 import BodyHome from './BodyHome'
 import FooterHome from './FooterHome'
