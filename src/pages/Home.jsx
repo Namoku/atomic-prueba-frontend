@@ -7,8 +7,11 @@ function Home () {
     <main className={styles.home}>
       <Headline />
       <section className={styles.body}>
+        <article>
+          <IconButton type='drop' href='#' />
+          Quiero saber más
+        </article>
         SOMOS EL BRAZO DERECHO DE LA TECNOLOGÍA
-        <IconButton type='drop' href='#' />
       </section>
     </main>
   )

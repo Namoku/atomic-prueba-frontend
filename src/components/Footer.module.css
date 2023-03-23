@@ -6,6 +6,7 @@
   font-size: 1.5rem;
   font-weight: 700;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .main section {

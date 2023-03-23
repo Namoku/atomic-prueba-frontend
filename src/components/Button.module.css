@@ -25,7 +25,7 @@
 
 .secondary {
   color: white;
-  background-color: #fa4d09;
+  background-color: var(--secondary);
 }
 
 .component {
