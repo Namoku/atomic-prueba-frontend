@@ -1,21 +1,14 @@
-import './Home.css'
-import astronaut from '../assets/astronaut.png'
-import Button from '../components/Button'
+import styles from './Home.module.css'
+import IconButton from '../components/IconButton'
+import Headline from '../components/Headline'
 
 function Home () {
   return (
-    <main className='home'>
-      <section className='headline'>
-        <article>
-          <img
-            src={astronaut}
-            alt='Astronaut wearing the suit labeled with Atomic32'
-          />
-        </article>
-        <article>
-          <p>Desarrolla todo tu POTENCIAL dentro del equipo ATOMICLABS</p>
-          <Button title='¡Quiero ser parte!' />
-        </article>
+    <main className={styles.home}>
+      <Headline />
+      <section className={styles.body}>
+        SOMOS EL BRAZO DERECHO DE LA TECNOLOGÍA
+        <IconButton type='drop' href='#' />
       </section>
     </main>
   )
