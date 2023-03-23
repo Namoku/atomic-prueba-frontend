@@ -69,7 +69,7 @@
 .footerHome main > div {
   top: 15rem;
   width: 100%;
-  height: 100%;
+  height: 80%;
   background-color: var(--accent);
   border-radius: 7.5rem 7.5rem 0 0;
   position: absolute;
@@ -119,4 +119,8 @@
   background-position: center;
   left: 0;
   top: 10%;
+}
+
+.table {
+  position: relative;
 }

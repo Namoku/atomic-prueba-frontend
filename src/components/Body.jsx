@@ -3,6 +3,7 @@ import styles from 'styles/Body.module.css'
 import Cards from './Cards'
 import BodyHome from './BodyHome'
 import FooterHome from './FooterHome'
+import Table from './Table'
 
 function Body () {
   return (
@@ -20,6 +21,7 @@ function Body () {
         </p>
       </h2>
       <FooterHome className={styles.footerHome} />
+      <Table className={styles.table} />
     </main>
   )
 }
