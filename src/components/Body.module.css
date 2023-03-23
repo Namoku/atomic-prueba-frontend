@@ -1,0 +1,34 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navigate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+
+.button {
+  width: 4rem;
+}
+
+.cards {
+  margin-top: 6rem;
+}
+
+.cards p {
+  margin: 0;
+  line-height: normal;
+  font-size: 3.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.cards p span {
+  color: var(--secondary);
+}

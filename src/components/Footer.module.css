@@ -31,3 +31,8 @@
   width: 2.5rem;
   height: auto;
 }
+
+.imgContainer {
+  display: flex;
+  justify-content: center;
+}

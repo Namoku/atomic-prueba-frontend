@@ -1,18 +1,11 @@
-import styles from './Home.module.css'
-import IconButton from '../components/IconButton'
 import Headline from '../components/Headline'
+import Body from '../components/Body'
 
 function Home () {
   return (
-    <main className={styles.home}>
+    <main>
       <Headline />
-      <section className={styles.body}>
-        <article>
-          <IconButton type='drop' href='#' />
-          Quiero saber más
-        </article>
-        SOMOS EL BRAZO DERECHO DE LA TECNOLOGÍA
-      </section>
+      <Body />
     </main>
   )
 }

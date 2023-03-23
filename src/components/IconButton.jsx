@@ -16,9 +16,9 @@ function IconButton ({ type, href, className }) {
       href={href}
       target={type === 'drop' ? undefined : '_blank'}
       rel='noreferrer'
-      className={className}
+      className={styles.imgContainer}
     >
-      <img className={styles.img} src={imgSrc} alt={`${type} logo`} />
+      <img className={className ?? styles.img} src={imgSrc} alt={`${type} logo`} />
     </a>
   )
 }
