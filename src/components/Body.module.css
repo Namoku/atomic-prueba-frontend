@@ -37,7 +37,25 @@
   color: var(--secondary);
 }
 
+.body h2 {
+  margin: 6rem;
+}
+
 .bodyContainer main {
   flex-direction: column;
+  align-items: center;
+}
+
+.footerHome {
+  width: 100%;
+  background-color: var(--accent);
+  border-radius: 7.5rem 7.5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerHome main section {
+  display: flex;
   align-items: center;
 }

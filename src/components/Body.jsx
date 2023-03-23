@@ -13,7 +13,13 @@ function Body () {
       </section>
       <Cards className={styles.cards} />
       <BodyHome className={styles.bodyContainer} />
-      <FooterHome />
+      <h2>
+        <p>
+          ¿POR QUÉ
+          <span> ATOMIC?</span>
+        </p>
+      </h2>
+      <FooterHome className={styles.footerHome} />
     </main>
   )
 }

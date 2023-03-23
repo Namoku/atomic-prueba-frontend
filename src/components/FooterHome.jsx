@@ -2,37 +2,33 @@ import astronautDrawing from '../assets/astronautDrawing.png'
 import astronautComputer from '../assets/astronautComputer.png'
 import astronautPose from '../assets/astronautPose.png'
 
-function FooterHome () {
+function FooterHome ({ className }) {
   return (
-    <section>
-      <header>
-        <p>
-          ¿POR QUÉ
-          <span> ATOMIC?</span>
-        </p>
-      </header>
+    <section className={className}>
       <main>
-        <article>
-          <img src={astronautDrawing} alt='Astronaut with a digital tablet and a mouse' />
-          <ul>
-            <li>Usamos las tecnologías más modernas.</li>
-            <li>Innovamos y creamos proyectos retadores.</li>
-          </ul>
-        </article>
-        <article>
-          <img src={astronautComputer} alt='Astronaut typing with a hand in a laptop' />
-          <ul>
-            <li>¡Trabajamos en equipo rumbo al éxito!</li>
-            <li>No tenemos código de vestimenta</li>
-          </ul>
-        </article>
-        <article>
-          <img src={astronautPose} alt='Astronaut posing with a hand' />
-          <ul>
-            <li>Realizamos actividades para tu bienestar.</li>
-            <li>¡Tenemos un parque frente a la oficina!</li>
-          </ul>
-        </article>
+        <section>
+          <article>
+            <img src={astronautDrawing} alt='Astronaut with a digital tablet and a mouse' />
+            <ul>
+              <li>Usamos las tecnologías más modernas.</li>
+              <li>Innovamos y creamos proyectos retadores.</li>
+            </ul>
+          </article>
+          <article>
+            <img src={astronautComputer} alt='Astronaut typing with a hand in a laptop' />
+            <ul>
+              <li>¡Trabajamos en equipo rumbo al éxito!</li>
+              <li>No tenemos código de vestimenta</li>
+            </ul>
+          </article>
+          <article>
+            <img src={astronautPose} alt='Astronaut posing with a hand' />
+            <ul>
+              <li>Realizamos actividades para tu bienestar.</li>
+              <li>¡Tenemos un parque frente a la oficina!</li>
+            </ul>
+          </article>
+        </section>
       </main>
     </section>
   )

@@ -3,7 +3,7 @@ import Body from '../components/Body'
 
 function Home () {
   return (
-    <main>
+    <main className='main'>
       <Headline />
       <Body />
     </main>
