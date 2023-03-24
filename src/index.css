@@ -24,7 +24,9 @@
 
 .App {
   background-image: url('./assets/background.png');
-  background-size: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #072348;
   width: 100%;
   display: flex;
   flex-direction: column;
