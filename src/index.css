@@ -3,6 +3,11 @@
   src: url('../fonts/Montserrat.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'FiraSans Bold';
+  src: url('../fonts/FiraSans-Bold.ttf') format('truetype');
+}
+
 :root {
   font-family: 'Montserrat', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
