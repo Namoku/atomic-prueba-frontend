@@ -5,6 +5,7 @@
   padding: 0.75rem 3rem 0.75rem 3rem;
   border: none;
   cursor: pointer;
+  position: relative;
 }
 
 .button:hover {
