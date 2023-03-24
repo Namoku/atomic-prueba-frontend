@@ -20,7 +20,9 @@ function Headline () {
         <p>
           <span>ATOMIC</span>LABS
         </p>
-        <Button title='¡Quiero ser parte!' />
+        <div>
+          <Button title='¡Quiero ser parte!' />
+        </div>
       </article>
     </section>
   )

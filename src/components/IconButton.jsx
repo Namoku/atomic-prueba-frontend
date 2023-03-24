@@ -3,7 +3,7 @@ import twitter from '../assets/twitter.png'
 import linkedin from '../assets/linkedin.png'
 import drop from '../assets/drop.png'
 
-function IconButton ({ type, href, className }) {
+function IconButton ({ type, href, className, onClick }) {
   const IconTypes = {
     twitter,
     linkedin,
@@ -17,6 +17,7 @@ function IconButton ({ type, href, className }) {
       target={type === 'drop' ? undefined : '_blank'}
       rel='noreferrer'
       className={styles.imgContainer}
+      onClick={onClick}
     >
       <img className={className ?? styles.img} src={imgSrc} alt={`${type} logo`} />
     </a>

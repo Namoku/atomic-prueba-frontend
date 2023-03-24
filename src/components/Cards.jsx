@@ -2,10 +2,11 @@ import Card from './Card'
 import card0 from '../assets/card0.png'
 import card1 from '../assets/card1.png'
 import card2 from '../assets/card2.png'
+import { forwardRef } from 'react'
 
-function Cards ({ className }) {
+const Cards = forwardRef(({ className }, ref) => {
   return (
-    <section className={className}>
+    <section className={className} ref={ref}>
       <header>
         <p>SOMOS EL BRAZO DERECHO</p>
         <p>
@@ -58,6 +59,6 @@ function Cards ({ className }) {
       </main>
     </section>
   )
-}
+})
 
 export default Cards

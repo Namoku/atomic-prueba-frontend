@@ -17,6 +17,10 @@
   width: 30vw;
 }
 
+.headline article div {
+  margin: 1rem;
+}
+
 .headline article p {
   text-align: justify;
   font-size: 4rem;
