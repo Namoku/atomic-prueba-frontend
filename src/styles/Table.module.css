@@ -1,0 +1,9 @@
+.icon {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.icon > img {
+  width: 1.75rem;
+}

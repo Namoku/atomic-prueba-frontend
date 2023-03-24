@@ -69,7 +69,7 @@
 .footerHome main > div {
   top: 15rem;
   width: 100%;
-  height: calc(100% - 2rem);
+  height: calc(100vh - 10rem);
   background-color: var(--accent);
   border-radius: 7.5rem 7.5rem 0 0;
   position: absolute;
@@ -122,6 +122,30 @@
 }
 
 .table {
+  display: flex;
+  justify-content: center;
   position: relative;
   margin: 5rem;
+  width: 100%;
+}
+
+.table table {
+  width: 72.5rem;
+  padding: 1.5rem;
+  color: black;
+  font-size: 1.15rem;
+  background-color: white;
+  border-radius: 0.75rem;
+}
+
+.table table thead tr th:nth-last-child(-n + 2) {
+  text-align: center;
+}
+
+.table table tbody tr td:nth-last-child(-n + 2) {
+  justify-content: center;
+}
+
+.table table thead tr th:first-child {
+  text-align: left;
 }
