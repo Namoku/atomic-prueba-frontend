@@ -16,32 +16,31 @@
   margin: 5rem;
   max-width: 72.5rem;
   border-radius: 0.75rem;
-  padding: 2rem 2rem 0 2rem;
 }
 
 .table table {
   width: 100%;
   color: black;
-  font-weight: 450;
   table-layout: fixed;
   border-collapse: collapse;
 }
 
-.table table tbody tr:not(:last-child) {
+.table table tbody tr:not(:nth-last-child(-n + 2)) td:not(:last-child) {
   border-bottom: 1.5px solid #0000002f;
 }
 
-.table table tbody td:not(:first-child),
-.table table thead th:not(:first-child) {
+.table table tbody td:not(:nth-child(2)),
+.table table thead th:not(:nth-child(2)) {
   border-left: 1.5px solid #0000002f;
 }
 
 .table table th {
   font-size: 1.25rem;
-  padding-top: 1rem;
+  padding: 1.5rem;
 }
 
 .table table tbody td {
+  padding: 1.5rem;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
@@ -49,6 +48,30 @@
 .table table thead tr th:last-child
  {
   font-size: 2rem;
+}
+
+.table table thead tr th:nth-last-child(-n + 2),
+.table table tbody tr td:nth-last-child(-n + 2)
+ {
+  font-size: 2rem;
+  background-color: #e9f1f6;
+}
+
+.table table thead tr th:last-child {
+  border-radius: 0 1rem 0 0;
+}
+
+.table table tbody tr:last-child td:last-child {
+  border-radius: 0 0 1rem 0;
+}
+
+.table table thead tr th:first-child,
+.table table tbody tr td:first-child,
+.table table thead tr th:last-child,
+.table table tbody tr td:last-child {
+  width: 1.5rem;
+  padding: 0;
+  border: none !important;
 }
 
 .table table thead tr th:first-child {
