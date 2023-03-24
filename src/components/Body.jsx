@@ -4,6 +4,7 @@ import Cards from './Cards'
 import BodyHome from './BodyHome'
 import FooterHome from './FooterHome'
 import Table from './Table'
+import Button from './Button'
 
 function Body () {
   return (
@@ -21,7 +22,8 @@ function Body () {
         </p>
       </h2>
       <FooterHome className={styles.footerHome} />
-      <Table className={styles.table} />
+      <Table />
+      <Button title='¡Quiero ser parte!' />
     </main>
   )
 }

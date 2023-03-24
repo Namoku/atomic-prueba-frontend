@@ -1,0 +1,32 @@
+[
+  {
+    "feature": "Equipo inclusivo, honesto y auténtico",
+    "others": true,
+    "atomic": true
+  },
+  {
+    "feature": "Puntualidad es nuestro segundo nombre",
+    "others": true,
+    "atomic": true
+  },
+  {
+    "feature": "Siempre innovamos en nuestros productos",
+    "others": true,
+    "atomic": true
+  },
+  {
+    "feature": "Te ayudamos a crecer e implementar nuevos conocimientos",
+    "others": false,
+    "atomic": true
+  },
+  {
+    "feature": "Nos preocupamos por tu bienestar",
+    "others": false,
+    "atomic": true
+  },
+  {
+    "feature": "El respeto es una parte fundamental",
+    "others": false,
+    "atomic": true
+  }
+]
