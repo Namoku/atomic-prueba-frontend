@@ -1,5 +1,6 @@
 import people from '../assets/people.png'
 import Button from './Button'
+import Crums from './Crums'
 
 function BodyHome ({ className }) {
   return (
@@ -15,6 +16,7 @@ function BodyHome ({ className }) {
           src={people}
           alt='People with a computer between all users and a cat'
         />
+        <Crums />
         <Button title='¡Quiero ser parte!' />
       </main>
     </section>
