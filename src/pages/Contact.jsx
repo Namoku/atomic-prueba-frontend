@@ -1,6 +1,8 @@
+import styles from 'styles/Contact.module.css'
+
 function Contact () {
   return (
-    <main>
+    <main className={styles.main}>
       HOLA
     </main>
   )

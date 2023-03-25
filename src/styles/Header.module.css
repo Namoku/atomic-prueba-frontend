@@ -13,6 +13,11 @@
   width: 100%;
 }
 
+.header > main > a {
+  text-decoration: none;
+  color: white;
+}
+
 .header > main > div {
   width: 100%;
   border-right: 1px solid white;
@@ -23,4 +28,5 @@
 .header > main > div img {
   height: 100%;
   width: auto;
+  cursor: pointer;
 }

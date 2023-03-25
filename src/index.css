@@ -29,7 +29,7 @@
 
 .App {
   background-image: url('./assets/background.png');
-  background-size: contain;
+  background-size: 100vw 100vh;
   background-repeat: no-repeat;
   background-color: #072348;
   width: 100%;
@@ -37,6 +37,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  position: relative;
 }
 
 .main {
