@@ -1,27 +1,55 @@
 {
   "0": {
-    "title": "TE QUEREMOS ",
-    "titleAlt": "CONOCER",
+    "title": {
+      "main": "TE QUEREMOS ",
+      "alt": "CONOCER"
+    },
+    "body": {
+      "main": "Queremos saber que eres tú, por favor ingresa los siguientes datos:"
+    },
     "src": "step1.png"
   },
   "1": {
-    "title": "VALIDA TU ",
-    "titleAlt": "CELULAR",
+    "title": {
+      "main": "VALIDA TU ",
+      "alt": "CELULAR"
+    },
+    "body": {
+      "main": "Necesitamos validar tu número para continuar",
+      "alt": "Ingresa tu número a 10 dígitos y te enviaremos un código SMS."
+    },
     "src": "step2.png"
   },
   "2": {
-    "title": "CÓDIGO DE ",
-    "titleAlt": "VERIFICACIÓN",
+    "title": {
+      "main": "CÓDIGO DE ",
+      "alt": "VERIFICACIÓN"
+    },
+    "body": {
+      "main": "Te enviamos un SMS al número:",
+      "alt": "Ingresa el código de verficación:"
+    },
     "src": "step3.png"
   },
   "3": {
-    "title": "TÉRMINOS Y ",
-    "titleAlt": "CONDICIONES",
+    "title": {
+      "main": "TÉRMINOS Y ",
+      "alt": "CONDICIONES"
+    },
+    "body": {
+      "main": "Por favor revisa nuestros términos y condiciones para este servicio:"
+    },
     "src": "step4.png"
   },
   "4": {
-    "title": "TUS DATOS ",
-    "titleAlt": "HA SIDO ENVIADOS CON ÉXITO",
+    "title": {
+      "main": "TUS DATOS ",
+      "alt": "HA SIDO ENVIADOS CON ÉXITO"
+    },
+    "body": {
+      "main": "En breve recibirás un correo de confirmación por parte del equipo de AtomicLabs.",
+      "alt": "Recuerda revisar tu bandeja de SPAM\n¡Esperamos verte pronto!"
+    },
     "src": null
   }
 }
