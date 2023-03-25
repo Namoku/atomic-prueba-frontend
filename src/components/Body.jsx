@@ -29,7 +29,7 @@ function Body () {
       </h2>
       <FooterHome className={styles.footerHome} />
       <Table />
-      <Button title='¡Quiero ser parte!' />
+      <Button title='¡Quiero ser parte!' href='/contact' />
     </main>
   )
 }

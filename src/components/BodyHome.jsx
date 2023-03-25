@@ -17,7 +17,7 @@ function BodyHome ({ className }) {
           alt='People with a computer between all users and a cat'
         />
         <Crums />
-        <Button title='¡Quiero ser parte!' />
+        <Button title='¡Quiero ser parte!' href='/contact' />
       </main>
     </section>
   )
