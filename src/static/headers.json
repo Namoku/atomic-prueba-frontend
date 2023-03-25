@@ -1,0 +1,27 @@
+{
+  "0": {
+    "title": "TE QUEREMOS ",
+    "titleAlt": "CONOCER",
+    "src": "step1.png"
+  },
+  "1": {
+    "title": "VALIDA TU ",
+    "titleAlt": "CELULAR",
+    "src": "step2.png"
+  },
+  "2": {
+    "title": "CÓDIGO DE ",
+    "titleAlt": "VERIFICACIÓN",
+    "src": "step3.png"
+  },
+  "3": {
+    "title": "TÉRMINOS Y ",
+    "titleAlt": "CONDICIONES",
+    "src": "step4.png"
+  },
+  "4": {
+    "title": "TUS DATOS ",
+    "titleAlt": "HA SIDO ENVIADOS CON ÉXITO",
+    "src": null
+  }
+}
