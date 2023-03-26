@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import HeaderForm from 'src/components/HeaderForm'
 import Button from 'src/components/Button'
 import InputField from 'src/components/InputField'
@@ -16,6 +16,8 @@ import step1 from 'assets/step1.png'
 import step2 from 'assets/step2.png'
 import step3 from 'assets/step3.png'
 import step4 from 'assets/step4.png'
+
+const IMAGES_URI = [form1, form2, form3, form4, step1, step2, step3, step4]
 
 const getImage = (id) => {
   const IMAGES = {
@@ -160,6 +162,14 @@ function Contact () {
   const { title, body, button } = HEADERS_DATA[step]
   const { stepImg, formImg } = getImage(step)
 
+  useEffect(() => {
+    IMAGES_URI.forEach(image => {
+      // eslint-disable-next-line no-undef
+      const imageLoad = new Image()
+      imageLoad.src = image
+    })
+  }, [])
+
   return (
     <main className={styles.main}>
       {openModal ? <Modal handleClose={() => setOpenModal(false)} /> : null}
@@ -170,10 +180,12 @@ function Contact () {
         type={MODAL_DATA[modal]?.type}
       />
       <section className={step === 4 ? styles.finalStep : styles.step}>
-        {step < 4
-          ? <Stepper step={step} />
+        {step < 4 ? <Stepper step={step} /> : null}
+        {step && step < 4
+          ? (
+            <a onClick={handleStepDown}>{'< Regresar'}</a>
+            )
           : null}
-        {step && step < 4 ? <a onClick={handleStepDown}>{'< Regresar'}</a> : null}
         <HeaderForm step={step} title={title} src={stepImg} />
         <article>{getBody(body, data, setData, step, setOpenModal)}</article>
         {button
@@ -193,9 +205,7 @@ function Contact () {
           step === 4 ? styles.imgContainerLastStep : styles.imgContainer
         }
       >
-        {formImg
-          ? <img src={formImg} alt='a' />
-          : null}
+        {formImg ? <img src={formImg} alt='a' /> : null}
       </section>
     </main>
   )
