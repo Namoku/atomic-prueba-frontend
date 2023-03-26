@@ -6,8 +6,9 @@ import Button from 'src/components/Button'
 import InputField from 'src/components/InputField'
 import Checkbox from 'src/components/Checkbox'
 import Notification from 'src/components/Notification'
+import Modal from 'src/components/Modal'
 
-function getBody (body, data, setData, step) {
+function getBody (body, data, setData, step, setOpenModal) {
   const { main } = body
   const { name, lastName, phone, code, terms } = data
   const alt = body?.alt
@@ -67,7 +68,7 @@ function getBody (body, data, setData, step) {
       <>
         <p>{main}</p>
         <span>{alt}</span>
-        <div className={styles.terms}>
+        <div className={styles.terms} onClick={() => setOpenModal(true)}>
           <a>Consulta Términos y Condiciones</a>
         </div>
         <Checkbox
@@ -119,8 +120,8 @@ function Contact () {
     terms: false
   })
   const [open, setOpen] = useState(false)
+  const [openModal, setOpenModal] = useState(false)
   const [modal, setModal] = useState(null)
-  const { title, body, src, button, imgAside } = HEADERS_DATA[step]
   const handleOpenModal = () => setOpen(true)
   const handleCloseModal = () => setOpen(false)
 
@@ -136,9 +137,11 @@ function Contact () {
     setStep(step + 1)
   }
   const handleStepDown = () => setStep(step - 1)
+  const { title, body, src, button, imgAside } = HEADERS_DATA[step]
 
   return (
     <main className={styles.main}>
+      {openModal ? <Modal handleClose={() => setOpenModal(false)} /> : null}
       <Notification
         open={open}
         handleClose={handleCloseModal}
@@ -148,7 +151,7 @@ function Contact () {
       <section className={step === 4 ? styles.finalStep : styles.step}>
         {step ? <a onClick={handleStepDown}>{'< Regresar'}</a> : null}
         <HeaderForm step={step} title={title} src={src} />
-        <article>{getBody(body, data, setData, step)}</article>
+        <article>{getBody(body, data, setData, step, setOpenModal)}</article>
         {button
           ? (
             <Button
