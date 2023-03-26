@@ -53,7 +53,7 @@ function getBody (body, data, setData, step) {
         <InputField
           label='Código de verificación'
           value={code}
-          onChange={handleChange('code')}
+          onChange={handleChange('code', 6)}
           type='number'
         />
       </>
@@ -68,13 +68,25 @@ function getBody (body, data, setData, step) {
   return stepBody[step]
 }
 
+function getDisabled (step, data) {
+  const { name, lastName, phone, code, terms } = data
+  const disabled = {
+    0: name.length >= 5 && lastName.length,
+    1: phone.length === 10,
+    2: code.length === 6,
+    3: terms
+  }
+  return !disabled[step]
+}
+
 function Contact () {
   const [step, setStep] = useState(0)
   const [data, setData] = useState({
     name: '',
     lastName: '',
     phone: '',
-    code: ''
+    code: '',
+    terms: false
   })
   const { title, body, src, button } = HEADERS_DATA[step]
   const handleClick = () => setStep(step + 1)
@@ -93,6 +105,7 @@ function Contact () {
               onClick={handleClick}
               type='secondary'
               className={styles.button}
+              disabled={getDisabled(step, data)}
             />
             )
           : null}
