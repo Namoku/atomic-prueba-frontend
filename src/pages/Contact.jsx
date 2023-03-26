@@ -175,7 +175,9 @@ function Contact () {
           step === 4 ? styles.imgContainerLastStep : styles.imgContainer
         }
       >
-        <img src={formImg} alt='a' />
+        {formImg
+          ? <img src={formImg} alt='a' />
+          : null}
       </section>
     </main>
   )

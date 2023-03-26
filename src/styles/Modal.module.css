@@ -16,7 +16,8 @@
 }
 
 .open {
-  animation: close 3.5s linear;
+  animation: close 4.5s linear;
+  animation-iteration-count: 1;
 }
 
 .modal, .open {
