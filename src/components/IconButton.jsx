@@ -1,7 +1,7 @@
 import styles from 'styles/Footer.module.css'
-import twitter from '../assets/twitter.png'
-import linkedin from '../assets/linkedin.png'
-import drop from '../assets/drop.png'
+import twitter from 'assets/twitter.png'
+import linkedin from 'assets/linkedin.png'
+import drop from 'assets/drop.png'
 
 function IconButton ({ type, href, className, onClick }) {
   const IconTypes = {

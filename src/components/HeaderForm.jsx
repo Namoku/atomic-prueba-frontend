@@ -2,7 +2,7 @@ import styles from 'styles/HeaderForm.module.css'
 
 function HeaderForm ({ title, src, step }) {
   const { main, alt } = title
-  const URI_IMAGE = `/src/assets/${src}`
+  const URI_IMAGE = `/assets/${src}`
 
   return (
     <main className={styles.main}>

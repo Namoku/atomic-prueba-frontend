@@ -1,7 +1,7 @@
 import Card from './Card'
-import card0 from '../assets/card0.png'
-import card1 from '../assets/card1.png'
-import card2 from '../assets/card2.png'
+import card0 from 'assets/card0.png'
+import card1 from 'assets/card1.png'
+import card2 from 'assets/card2.png'
 import { forwardRef } from 'react'
 
 const Cards = forwardRef(({ className }, ref) => {

@@ -1,6 +1,6 @@
-import astronautDrawing from '../assets/astronautDrawing.png'
-import astronautComputer from '../assets/astronautComputer.png'
-import astronautPose from '../assets/astronautPose.png'
+import astronautDrawing from 'assets/astronautDrawing.png'
+import astronautComputer from 'assets/astronautComputer.png'
+import astronautPose from 'assets/astronautPose.png'
 
 function FooterHome ({ className }) {
   return (

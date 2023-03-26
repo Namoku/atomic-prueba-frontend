@@ -153,7 +153,7 @@ function Contact () {
         {step < 4
           ? <Stepper step={step} />
           : null}
-        {step < 4 ? <a onClick={handleStepDown}>{'< Regresar'}</a> : null}
+        {step && step < 4 ? <a onClick={handleStepDown}>{'< Regresar'}</a> : null}
         <HeaderForm step={step} title={title} src={src} />
         <article>{getBody(body, data, setData, step, setOpenModal)}</article>
         {button
@@ -173,7 +173,7 @@ function Contact () {
           step === 4 ? styles.imgContainerLastStep : styles.imgContainer
         }
       >
-        <img src={`src/assets/${imgAside}`} alt='a' />
+        <img src={`/assets/${imgAside}`} alt='a' />
       </section>
     </main>
   )

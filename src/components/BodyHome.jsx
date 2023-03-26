@@ -1,4 +1,4 @@
-import people from '../assets/people.png'
+import people from 'assets/people.png'
 import Button from './Button'
 import Crums from './Crums'
 

@@ -1,5 +1,5 @@
 import styles from 'styles/Headline.module.css'
-import astronaut from '../assets/astronaut.png'
+import astronaut from 'assets/astronaut.png'
 import Button from '../components/Button'
 
 function Headline () {
