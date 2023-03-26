@@ -112,7 +112,7 @@ function Contact () {
 
   return (
     <main className={styles.main}>
-      <section>
+      <section className={step === 4 ? styles.finalStep : ''}>
         {step ? <a onClick={handleStepDown}>{'< Regresar'}</a> : null}
         <HeaderForm step={step} title={title} src={src} />
         <article>{getBody(body, data, setData, step)}</article>

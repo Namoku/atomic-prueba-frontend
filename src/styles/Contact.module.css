@@ -34,6 +34,10 @@
   flex: 3;
 }
 
+.finalStep {
+  flex: 1 !important;
+}
+
 .main > section:last-child img {
   margin-top: -5rem;
   max-width: 100%;
