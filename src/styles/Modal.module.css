@@ -1,0 +1,42 @@
+.container {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--background);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  gap: 1rem;
+}
+
+.container img {
+  height: 3.5rem;
+  width: auto;
+}
+
+.open {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 500;
+  animation: open 0.5s linear;
+  animation: close 3.5s linear;
+}
+
+@keyframes close {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+}

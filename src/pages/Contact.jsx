@@ -5,6 +5,7 @@ import HEADERS_DATA from 'static/headers.json'
 import Button from 'src/components/Button'
 import InputField from 'src/components/InputField'
 import Checkbox from 'src/components/Checkbox'
+import Notification from 'src/components/Notification'
 
 function getBody (body, data, setData, step) {
   const { main } = body
@@ -97,6 +98,17 @@ function getDisabled (step, data) {
   return !disabled[step]
 }
 
+const MODAL_DATA = {
+  sent: {
+    label: 'Te hemos enviado el código al número que nos proporcionaste',
+    type: 'done'
+  },
+  validated: {
+    label: 'Hemos validado el código',
+    type: 'done'
+  }
+}
+
 function Contact () {
   const [step, setStep] = useState(0)
   const [data, setData] = useState({
@@ -106,13 +118,34 @@ function Contact () {
     code: '',
     terms: false
   })
+  const [open, setOpen] = useState(false)
+  const [modal, setModal] = useState(null)
   const { title, body, src, button, imgAside } = HEADERS_DATA[step]
-  const handleClick = () => setStep(step + 1)
+  const handleOpenModal = () => setOpen(true)
+  const handleCloseModal = () => setOpen(false)
+
+  const handleClick = () => {
+    if (step === 1) {
+      handleOpenModal()
+      setModal('sent')
+    }
+    if (step === 2) {
+      handleOpenModal()
+      setModal('validated')
+    }
+    setStep(step + 1)
+  }
   const handleStepDown = () => setStep(step - 1)
 
   return (
     <main className={styles.main}>
-      <section className={step === 4 ? styles.finalStep : ''}>
+      <Notification
+        open={open}
+        handleClose={handleCloseModal}
+        label={MODAL_DATA[modal]?.label}
+        type={MODAL_DATA[modal]?.type}
+      />
+      <section className={step === 4 ? styles.finalStep : styles.step}>
         {step ? <a onClick={handleStepDown}>{'< Regresar'}</a> : null}
         <HeaderForm step={step} title={title} src={src} />
         <article>{getBody(body, data, setData, step)}</article>
@@ -128,7 +161,11 @@ function Contact () {
             )
           : null}
       </section>
-      <section>
+      <section
+        className={
+          step === 4 ? styles.imgContainerLastStep : styles.imgContainer
+        }
+      >
         <img src={`src/assets/${imgAside}`} alt='a' />
       </section>
     </main>
