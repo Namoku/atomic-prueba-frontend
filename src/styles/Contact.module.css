@@ -38,12 +38,12 @@
 }
 
 .imgContainer {
-  max-width: 30rem;
+  width: 40rem;
 }
 
 .imgContainerLastStep {
   margin-top: -5rem;
-  width: 40rem;
+  width: 55rem;
 }
 
 .main > section:last-child img {
