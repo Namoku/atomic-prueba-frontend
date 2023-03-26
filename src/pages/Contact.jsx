@@ -75,6 +75,12 @@ function getBody (body, data, setData, step) {
           label='Acepto los Términos y Condiciones'
         />
       </>
+    ),
+    4: (
+      <>
+        <p>{main}</p>
+        <span>{alt}</span>
+      </>
     )
   }
   return stepBody[step]
@@ -100,7 +106,7 @@ function Contact () {
     code: '',
     terms: false
   })
-  const { title, body, src, button } = HEADERS_DATA[step]
+  const { title, body, src, button, imgAside } = HEADERS_DATA[step]
   const handleClick = () => setStep(step + 1)
   const handleStepDown = () => setStep(step - 1)
 
@@ -123,7 +129,7 @@ function Contact () {
           : null}
       </section>
       <section>
-        <img src='a' alt='a' />
+        <img src={`src/assets/${imgAside}`} alt='a' />
       </section>
     </main>
   )

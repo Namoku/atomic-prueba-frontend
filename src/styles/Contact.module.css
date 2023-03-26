@@ -34,6 +34,11 @@
   flex: 3;
 }
 
+.main > section:last-child img {
+  margin-top: -5rem;
+  max-width: 100%;
+}
+
 .button {
   display: flex;
   justify-content: flex-end;

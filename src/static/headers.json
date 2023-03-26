@@ -8,7 +8,8 @@
       "main": "Queremos saber que eres tú, por favor ingresa los siguientes datos:"
     },
     "button": "Enviar",
-    "src": "step1.png"
+    "src": "step1.png",
+    "imgAside": "form1.png"
   },
   "1": {
     "title": {
@@ -21,7 +22,8 @@
       "alt": "Ingresa tu número a 10 dígitos y te enviaremos un código SMS."
     },
     "button": "Continuar",
-    "src": "step2.png"
+    "src": "step2.png",
+    "imgAside": "form2.png"
   },
   "2": {
     "title": {
@@ -33,7 +35,8 @@
       "alt": "Ingresa el código de verficación:"
     },
     "button": "Validar código",
-    "src": "step3.png"
+    "src": "step3.png",
+    "imgAside": "form2.png"
   },
   "3": {
     "title": {
@@ -44,7 +47,8 @@
       "main": "Por favor revisa nuestros términos y condiciones para este servicio:"
     },
     "button": "Enviar",
-    "src": "step4.png"
+    "src": "step4.png",
+    "imgAside": "form3.png"
   },
   "4": {
     "title": {
@@ -56,6 +60,7 @@
       "alt": "Recuerda revisar tu bandeja de SPAM\n¡Esperamos verte pronto!"
     },
     "button": null,
-    "src": null
+    "src": null,
+    "imgAside": "form4.png"
   }
 }

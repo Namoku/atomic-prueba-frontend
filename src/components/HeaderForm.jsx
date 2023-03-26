@@ -13,6 +13,7 @@ function HeaderForm ({ title, src, step }) {
         : null}
       <h1>
         {main}
+        {step === 4 ? <br /> : null}
         <span>{alt}</span>
       </h1>
     </main>
