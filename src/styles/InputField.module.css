@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 30rem;
+  margin: 1.25rem 0 1.25rem 0;
+}
+
+.container input {
+  background-color: white;
+  color: black;
+  border-radius: 0.25rem;
+  border: 1px solid #0000000f;
+  height: 2.5rem;
+  font-size: 1rem;
+  padding-left: 1rem;
+  font-weight: inherit;
+}
+
+.container label:last-child {
+  color: red;
+  font-size: 1rem;
+  font-weight: 600;
+  min-height: 2rem;
+}
+
+
+.container input[type=number]::-webkit-inner-spin-button, 
+.container input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.error input, .error input:focus {
+  outline: 0.15rem solid red;
+}

@@ -3,22 +3,46 @@ import HeaderForm from 'src/components/HeaderForm'
 import styles from 'styles/Contact.module.css'
 import HEADERS_DATA from 'static/headers.json'
 import Button from 'src/components/Button'
+import InputField from 'src/components/InputField'
 
-function getBody (body, data, step) {
+function getBody (body, data, setData, step) {
   const { main } = body
+  const { name, lastName, phone, code } = data
   const alt = body?.alt
-  const phone = data?.phone
+  const handleChange = (field, maxLength) => (value) => {
+    if (value.length <= maxLength || !maxLength) {
+      setData({ ...data, [field]: value })
+    }
+  }
 
   const stepBody = {
     0: (
       <>
         <p>{main}</p>
+        <InputField
+          label='Nombre (s)'
+          value={name}
+          onChange={handleChange('name')}
+          minLength={5}
+          errorLabel='El nombre deberá tener mínimo 5 caracteres'
+        />
+        <InputField
+          label='Apellidos'
+          value={lastName}
+          onChange={handleChange('lastName')}
+        />
       </>
     ),
     1: (
       <>
         <p>{main}</p>
         <span>{alt}</span>
+        <InputField
+          label='Número de Celular'
+          value={phone}
+          onChange={handleChange('phone', 10)}
+          type='number'
+        />
       </>
     ),
     2: (
@@ -26,6 +50,12 @@ function getBody (body, data, step) {
         <p>{main}</p>
         <p>{phone}</p>
         <span>{alt}</span>
+        <InputField
+          label='Código de verificación'
+          value={code}
+          onChange={handleChange('code')}
+          type='number'
+        />
       </>
     ),
     3: (
@@ -40,10 +70,14 @@ function getBody (body, data, step) {
 
 function Contact () {
   const [step, setStep] = useState(0)
+  const [data, setData] = useState({
+    name: '',
+    lastName: '',
+    phone: '',
+    code: ''
+  })
   const { title, body, src, button } = HEADERS_DATA[step]
-  const handleClick = () => {
-    setStep(step + 1)
-  }
+  const handleClick = () => setStep(step + 1)
   const handleStepDown = () => setStep(step - 1)
 
   return (
@@ -51,7 +85,7 @@ function Contact () {
       <section>
         {step ? <a onClick={handleStepDown}>{'< Regresar'}</a> : null}
         <HeaderForm step={step} title={title} src={src} />
-        <article>{getBody(body, null, step)}</article>
+        <article>{getBody(body, data, setData, step)}</article>
         {button
           ? (
             <Button
