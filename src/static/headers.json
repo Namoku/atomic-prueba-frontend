@@ -7,17 +7,20 @@
     "body": {
       "main": "Queremos saber que eres tú, por favor ingresa los siguientes datos:"
     },
+    "button": "Enviar",
     "src": "step1.png"
   },
   "1": {
     "title": {
       "main": "VALIDA TU ",
+      "mainAlt": "EDITA TU ",
       "alt": "CELULAR"
     },
     "body": {
       "main": "Necesitamos validar tu número para continuar",
       "alt": "Ingresa tu número a 10 dígitos y te enviaremos un código SMS."
     },
+    "button": "Continuar",
     "src": "step2.png"
   },
   "2": {
@@ -29,6 +32,7 @@
       "main": "Te enviamos un SMS al número:",
       "alt": "Ingresa el código de verficación:"
     },
+    "button": "Validar código",
     "src": "step3.png"
   },
   "3": {
@@ -39,6 +43,7 @@
     "body": {
       "main": "Por favor revisa nuestros términos y condiciones para este servicio:"
     },
+    "button": "Enviar",
     "src": "step4.png"
   },
   "4": {
@@ -50,6 +55,7 @@
       "main": "En breve recibirás un correo de confirmación por parte del equipo de AtomicLabs.",
       "alt": "Recuerda revisar tu bandeja de SPAM\n¡Esperamos verte pronto!"
     },
+    "button": null,
     "src": null
   }
 }
