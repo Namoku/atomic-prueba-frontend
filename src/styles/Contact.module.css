@@ -26,7 +26,7 @@
 }
 
 .main > section a {
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
 }
 
@@ -39,4 +39,11 @@
   justify-content: flex-end;
   align-items: flex-end;
   margin-bottom: 3rem;
+}
+
+.terms {
+  text-decoration: underline;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 2rem 0 2rem 0;
 }

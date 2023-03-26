@@ -4,10 +4,11 @@ import styles from 'styles/Contact.module.css'
 import HEADERS_DATA from 'static/headers.json'
 import Button from 'src/components/Button'
 import InputField from 'src/components/InputField'
+import Checkbox from 'src/components/Checkbox'
 
 function getBody (body, data, setData, step) {
   const { main } = body
-  const { name, lastName, phone, code } = data
+  const { name, lastName, phone, code, terms } = data
   const alt = body?.alt
   const handleChange = (field, maxLength) => (value) => {
     if (value.length <= maxLength || !maxLength) {
@@ -56,12 +57,23 @@ function getBody (body, data, setData, step) {
           onChange={handleChange('code', 6)}
           type='number'
         />
+        <p>
+          ¿No recibiste el código? <a>Reenviar código</a>
+        </p>
       </>
     ),
     3: (
       <>
         <p>{main}</p>
         <span>{alt}</span>
+        <div className={styles.terms}>
+          <a>Consulta Términos y Condiciones</a>
+        </div>
+        <Checkbox
+          checked={terms}
+          onClick={() => setData({ ...data, terms: !terms })}
+          label='Acepto los Términos y Condiciones'
+        />
       </>
     )
   }
