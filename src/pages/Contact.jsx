@@ -7,6 +7,7 @@ import InputField from 'src/components/InputField'
 import Checkbox from 'src/components/Checkbox'
 import Notification from 'src/components/Notification'
 import Modal from 'src/components/Modal'
+import Stepper from 'src/components/Stepper'
 
 function getBody (body, data, setData, step, setOpenModal) {
   const { main } = body
@@ -149,7 +150,10 @@ function Contact () {
         type={MODAL_DATA[modal]?.type}
       />
       <section className={step === 4 ? styles.finalStep : styles.step}>
-        {step ? <a onClick={handleStepDown}>{'< Regresar'}</a> : null}
+        {step < 4
+          ? <Stepper step={step} />
+          : null}
+        {step < 4 ? <a onClick={handleStepDown}>{'< Regresar'}</a> : null}
         <HeaderForm step={step} title={title} src={src} />
         <article>{getBody(body, data, setData, step, setOpenModal)}</article>
         {button
