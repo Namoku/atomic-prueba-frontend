@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import HeaderForm from 'src/components/HeaderForm'
-import styles from 'styles/Contact.module.css'
-import HEADERS_DATA from 'static/headers.json'
 import Button from 'src/components/Button'
 import InputField from 'src/components/InputField'
 import Checkbox from 'src/components/Checkbox'
 import Notification from 'src/components/Notification'
 import Modal from 'src/components/Modal'
 import Stepper from 'src/components/Stepper'
+import styles from 'styles/Contact.module.css'
+import HEADERS_DATA from 'static/headers.json'
+import getImage from './utils'
 
 function getBody (body, data, setData, step, setOpenModal) {
   const { main } = body
@@ -138,7 +139,8 @@ function Contact () {
     setStep(step + 1)
   }
   const handleStepDown = () => setStep(step - 1)
-  const { title, body, src, button, imgAside } = HEADERS_DATA[step]
+  const { title, body, button } = HEADERS_DATA[step]
+  const { stepImg, formImg } = getImage(step)
 
   return (
     <main className={styles.main}>
@@ -154,7 +156,7 @@ function Contact () {
           ? <Stepper step={step} />
           : null}
         {step && step < 4 ? <a onClick={handleStepDown}>{'< Regresar'}</a> : null}
-        <HeaderForm step={step} title={title} src={src} />
+        <HeaderForm step={step} title={title} src={stepImg} />
         <article>{getBody(body, data, setData, step, setOpenModal)}</article>
         {button
           ? (
@@ -173,7 +175,7 @@ function Contact () {
           step === 4 ? styles.imgContainerLastStep : styles.imgContainer
         }
       >
-        <img src={`/assets/${imgAside}`} alt='a' />
+        <img src={formImg} alt='a' />
       </section>
     </main>
   )

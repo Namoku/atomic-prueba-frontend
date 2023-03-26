@@ -2,13 +2,12 @@ import styles from 'styles/HeaderForm.module.css'
 
 function HeaderForm ({ title, src, step }) {
   const { main, alt } = title
-  const URI_IMAGE = `/assets/${src}`
 
   return (
     <main className={styles.main}>
       {src
         ? (
-          <img src={URI_IMAGE} alt={`Orange circle with the number ${step + 1}`} />
+          <img src={src} alt={`Orange circle with the number ${step + 1}`} />
           )
         : null}
       <h1>
