@@ -1,13 +1,21 @@
 .container {
-  display: none;
+  opacity: 0;
   height: 100vh;
   width: 100vw;
   background-color: var(--background);
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
   gap: 1rem;
+  transition: opacity 0.4s ease-in-out;
+  pointer-events: none;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 500;
 }
 
 .container img {
@@ -16,8 +24,7 @@
 }
 
 .open {
-  animation: close 4.5s linear;
-  animation-iteration-count: 1;
+  opacity: 1;
 }
 
 .modal, .open {

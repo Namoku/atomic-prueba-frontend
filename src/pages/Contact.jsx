@@ -122,11 +122,11 @@ function getDisabled (step, data) {
 }
 
 const MODAL_DATA = {
-  sent: {
+  1: {
     label: 'Te hemos enviado el código al número que nos proporcionaste',
     type: 'done'
   },
-  validated: {
+  2: {
     label: 'Hemos validado el código',
     type: 'done'
   }
@@ -144,23 +144,14 @@ function Contact () {
   const [open, setOpen] = useState(false)
   const [openModal, setOpenModal] = useState(false)
   const [modal, setModal] = useState(null)
+
   const handleOpenModal = () => setOpen(true)
   const handleCloseModal = () => setOpen(false)
-
-  const handleClick = () => {
-    if (step === 1) {
-      handleOpenModal()
-      setModal('sent')
-    }
-    if (step === 2) {
-      handleOpenModal()
-      setModal('validated')
-    }
-    setStep(step + 1)
-  }
   const handleStepDown = () => setStep(step - 1)
   const { title, body, button } = HEADERS_DATA[step]
   const { stepImg, formImg } = getImage(step)
+
+  let timeout = null
 
   useEffect(() => {
     IMAGES_URI.forEach(image => {
@@ -168,7 +159,16 @@ function Contact () {
       const imageLoad = new Image()
       imageLoad.src = image
     })
+    return () => clearTimeout(timeout)
   }, [])
+
+  const handleClick = () => {
+    if (step === 1 || step === 2) {
+      handleOpenModal()
+      setModal(step)
+      timeout = setTimeout(() => setStep(step + 1), 500)
+    } else { setStep(step + 1) }
+  }
 
   return (
     <main className={styles.main}>

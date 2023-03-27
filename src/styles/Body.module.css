@@ -6,16 +6,17 @@
 }
 
 .navigate {
+  margin-top: -2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-weight: 600;
-  font-size: 1.15rem;
+  font-size: 1.35rem;
 }
 
 .button {
-  width: 4rem;
+  width: 6rem;
 }
 
 .body header {
