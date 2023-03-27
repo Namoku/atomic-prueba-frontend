@@ -30,7 +30,7 @@ const getImage = (id) => {
   return IMAGES[id]
 }
 
-function getBody (body, data, setData, step, setOpenModal) {
+function getBody (body, data, setData, step, setOpenModal, handleReSend) {
   const { main } = body
   const { name, lastName, phone, code, terms } = data
   const alt = body?.alt
@@ -82,7 +82,7 @@ function getBody (body, data, setData, step, setOpenModal) {
           type='number'
         />
         <p>
-          ¿No recibiste el código? <a>Reenviar código</a>
+          ¿No recibiste el código? <a onClick={handleReSend}>Reenviar código</a>
         </p>
       </>
     ),
@@ -129,6 +129,10 @@ const MODAL_DATA = {
   2: {
     label: 'Hemos validado el código',
     type: 'done'
+  },
+  3: {
+    label: 'Te hemos reenviado el código al número que nos proporcionaste',
+    type: 'done'
   }
 }
 
@@ -154,7 +158,7 @@ function Contact () {
   let timeout = null
 
   useEffect(() => {
-    IMAGES_URI.forEach(image => {
+    IMAGES_URI.forEach((image) => {
       // eslint-disable-next-line no-undef
       const imageLoad = new Image()
       imageLoad.src = image
@@ -167,7 +171,14 @@ function Contact () {
       handleOpenModal()
       setModal(step)
       timeout = setTimeout(() => setStep(step + 1), 500)
-    } else { setStep(step + 1) }
+    } else {
+      setStep(step + 1)
+    }
+  }
+
+  const handleReSend = () => {
+    handleOpenModal()
+    setModal(3)
   }
 
   return (
@@ -187,7 +198,9 @@ function Contact () {
             )
           : null}
         <HeaderForm step={step} title={title} src={stepImg} />
-        <article>{getBody(body, data, setData, step, setOpenModal)}</article>
+        <article>
+          {getBody(body, data, setData, step, setOpenModal, handleReSend)}
+        </article>
         {button
           ? (
             <Button
